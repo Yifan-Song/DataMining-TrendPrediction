@@ -177,7 +177,7 @@ def getPredRes(path):
     print(count, rc.shape[0]-1)
     print(count/(rc.shape[0]-1))
     rcParams['figure.figsize'] = 10, 8
-    ax = df.plot(x='date', y=['real_close','pred_close'], color=['red','blue'], grid=True)
+    ax = df.plot(y=['real_close','pred_close'], color=['red','blue'], grid=True)
     plt.show()
 
 def main():
@@ -185,4 +185,4 @@ def main():
     # getPredClose("pred_data.csv")
     # LstmBackTest('pred_data.csv', 0.0002, 1, 10000)
     
-getPredRes("./pred_data.csv")
+getPredRes("./new_pred_data.csv")
